@@ -18,6 +18,7 @@ import { WHATSAPP_URL } from "@/lib/design-system";
 import { WhatsAppModal } from "@/components/site/whatsapp-modal";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
 import { faqItems } from "@/lib/faq-data";
+import { newsArticles } from "@/lib/news-data";
 
 const partners = [
   { name: "Ripple", logo: "/visuals/ripple.png", url: "https://ripple.com" },
@@ -105,7 +106,6 @@ const recognitionCards = [
     description: "Grant recipient",
   },
 ];
-
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -493,6 +493,57 @@ export default function Home() {
                   {card.description}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* In the news */}
+      <section className="bg-off-white py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+              In the News
+            </p>
+            <h2 className="mt-3 text-3xl font-bold text-primary md:text-5xl">
+              Highlights from Mandla Money
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-4 lg:grid-cols-4">
+            {newsArticles.map((article) => (
+              <article
+                key={article.title}
+                className="card-hover overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-soft"
+              >
+                <div className="bg-off-white p-2">
+                  <Image
+                    src={`${basePath}${article.image}`}
+                    alt={article.title}
+                    width={article.imageWidth}
+                    height={article.imageHeight}
+                    className="h-auto w-full"
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+                    {article.date}
+                  </p>
+                  <h3 className="mt-2 line-clamp-2 text-base font-semibold text-primary">
+                    {article.title}
+                  </h3>
+                  <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-primary/60">
+                    {article.excerpt}
+                  </p>
+                  <Link
+                    href={`/news/${article.slug}`}
+                    className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition hover:text-accent"
+                  >
+                    Read more
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
+              </article>
             ))}
           </div>
         </div>
