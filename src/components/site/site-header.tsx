@@ -24,55 +24,55 @@ import { WhatsAppModal } from "./whatsapp-modal";
 
 const personalLinks = [
   {
-    icon: Send,
-    label: "Send Money",
-    description: "Send to any phone number instantly",
-    href: "/personal",
+    icon: MessageCircle,
+    label: "Get Started",
+    description: "Overview and quick start",
+    href: "/personal#get-started",
+  },
+  {
+    icon: Phone,
+    label: "Scan to Start",
+    description: "Open Mandla Money from your phone",
+    href: "/personal#scan-to-start",
   },
   {
     icon: Wallet,
-    label: "Receive Money",
-    description: "Get paid to your phone number",
-    href: "/personal",
+    label: "What You Can Do",
+    description: "Core personal wallet actions",
+    href: "/personal#what-you-can-do",
   },
   {
-    icon: Zap,
-    label: "Airtime & Electricity",
-    description: "Pay bills via WhatsApp",
-    href: "/personal",
-  },
-  {
-    icon: Globe,
-    label: "Cross-Border Transfers",
-    description: "Send across countries",
-    href: "/personal",
+    icon: Send,
+    label: "Why People Choose Mandla Money",
+    description: "Benefits for everyday users",
+    href: "/personal#why-people-choose",
   },
 ];
 
 const businessLinks = [
   {
-    icon: CreditCard,
-    label: "Bulk Payouts",
-    description: "Pay thousands of recipients",
-    href: "/business",
-  },
-  {
     icon: Users,
-    label: "NGO Disbursements",
-    description: "Grants and aid distribution",
-    href: "/business",
+    label: "Who it's for",
+    description: "NGOs, employers, and fintech platforms",
+    href: "/business#who-its-for",
   },
   {
-    icon: Phone,
-    label: "Payroll",
-    description: "Pay workers without bank accounts",
-    href: "/business",
+    icon: Zap,
+    label: "Why businesses choose Mandla Money",
+    description: "Speed, cost, compliance, and inclusion",
+    href: "/business#why-businesses-choose",
+  },
+  {
+    icon: CreditCard,
+    label: "Bulk payout flow",
+    description: "How disbursements work end-to-end",
+    href: "/business#bulk-payout-flow",
   },
   {
     icon: Code2,
-    label: "API Documentation",
-    description: "Developer integration",
-    href: "/business",
+    label: "API section",
+    description: "Developer integration and endpoints",
+    href: "/business#api",
   },
 ];
 

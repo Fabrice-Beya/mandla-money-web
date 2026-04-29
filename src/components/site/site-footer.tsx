@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MessageCircle, Shield } from "lucide-react";
+import { Shield } from "lucide-react";
 import { basePath } from "@/lib/base-path";
-import { WHATSAPP_URL } from "@/lib/design-system";
 
 const footerSections = [
   {
@@ -32,6 +31,13 @@ const footerSections = [
       { href: "/contact", label: "Contact" },
     ],
   },
+];
+
+const footerDocuments = [
+  { href: "/documents/Terms%20of%20Use.pdf", label: "Terms of Use" },
+  { href: "/documents/Privacy%20Policy.pdf", label: "Privacy Policy" },
+  { href: "/documents/Risk%20Disclosure.pdf", label: "Risk Disclosure" },
+  { href: "/documents/Complaints%20Policy.pdf", label: "Complaints Policy" },
 ];
 
 export function SiteFooter() {
@@ -66,28 +72,12 @@ export function SiteFooter() {
 
           <div className="mt-6 flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-white/60 w-fit">
             <Shield className="h-3.5 w-3.5 text-accent" />
-            Authorised FSP&nbsp;<span className="text-white">55523</span>
+            Authorised FSP55523
           </div>
 
           <div className="mt-6 flex items-center gap-2">
             <a
-              href="mailto:info@mandla.money"
-              aria-label="Email Mandla Money"
-              className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-white/60 transition hover:border-accent/40 hover:bg-accent/10 hover:text-accent"
-            >
-              <Mail className="h-4 w-4" />
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Mandla Money on WhatsApp"
-              className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-white/60 transition hover:border-accent/40 hover:bg-accent/10 hover:text-accent"
-            >
-              <MessageCircle className="h-4 w-4" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/mandla-money"
+              href="https://za.linkedin.com/company/mandla-money"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Mandla Money on LinkedIn"
@@ -100,6 +90,22 @@ export function SiteFooter() {
                 className="h-4 w-4"
               >
                 <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.82-1.95 3.75-1.95 4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.3c0-1.26-.02-2.88-1.76-2.88-1.76 0-2.03 1.37-2.03 2.79V21h-4V9z" />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/@MandlaMoney"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Mandla Money on YouTube"
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-white/60 transition hover:border-accent/40 hover:bg-accent/10 hover:text-accent"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden
+                className="h-4 w-4"
+              >
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6a3 3 0 0 0-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" />
               </svg>
             </a>
           </div>
@@ -131,15 +137,17 @@ export function SiteFooter() {
             © {year} Mandla Money (Pty) Ltd · Registration 2019/470624/07 · Authorised Financial Services Provider (FSP 55523).
           </p>
           <div className="flex flex-wrap gap-4 text-xs text-white/40">
-            <Link href="#" className="transition hover:text-white/70">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="transition hover:text-white/70">
-              Terms of Use
-            </Link>
-            <Link href="#" className="transition hover:text-white/70">
-              Legal Disclaimer
-            </Link>
+            {footerDocuments.map((document) => (
+              <Link
+                key={document.label}
+                href={document.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-white/70"
+              >
+                {document.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

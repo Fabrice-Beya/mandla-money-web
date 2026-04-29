@@ -176,8 +176,8 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-primary">How it works</h2>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <div className="card-hover rounded-2xl border border-primary/10 bg-white p-8 text-center shadow-soft">
+          <div className="mt-12 grid items-stretch gap-8 md:grid-cols-3">
+            <div className="card-hover flex h-full flex-col rounded-2xl border border-primary/10 bg-white p-8 text-center shadow-soft">
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 ring-1 ring-accent/20">
                 <MessageCircle className="h-6 w-6 text-accent" />
               </div>
@@ -190,7 +190,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="card-hover rounded-2xl border border-primary/10 bg-white p-8 text-center shadow-soft">
+            <div className="card-hover flex h-full flex-col rounded-2xl border border-primary/10 bg-white p-8 text-center shadow-soft">
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 ring-1 ring-accent/20">
                 <Wallet className="h-6 w-6 text-accent" />
               </div>
@@ -203,7 +203,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="card-hover rounded-2xl border border-primary/10 bg-white p-8 text-center shadow-soft">
+            <div className="card-hover flex h-full flex-col rounded-2xl border border-primary/10 bg-white p-8 text-center shadow-soft">
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 ring-1 ring-accent/20">
                 <ArrowRight className="h-6 w-6 text-accent" />
               </div>
@@ -261,8 +261,8 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="mt-10 grid gap-8 md:grid-cols-3">
-            <div className="card-hover rounded-2xl border border-primary/10 bg-white p-8 text-center shadow-soft">
+          <div className="mt-10 grid items-stretch gap-8 md:grid-cols-3">
+            <div className="card-hover flex h-full flex-col rounded-2xl border border-primary/10 bg-white p-8 text-center shadow-soft">
               <Shield className="mx-auto h-8 w-8 text-accent" />
               <h3 className="mt-4 font-semibold text-primary">Regulated</h3>
               <p className="mt-2 text-sm text-primary/50">
@@ -270,14 +270,14 @@ export default function AboutPage() {
                 FIC Compliant<br />
               </p>
             </div>
-            <div className="card-hover rounded-2xl border border-primary/10 bg-white p-8 text-center shadow-soft">
+            <div className="card-hover flex h-full flex-col rounded-2xl border border-primary/10 bg-white p-8 text-center shadow-soft">
               <Globe className="mx-auto h-8 w-8 text-accent" />
               <h3 className="mt-4 font-semibold text-primary">Global</h3>
               <p className="mt-2 text-sm text-primary/50">
               Global reach, local trust-built for everyone, everywhere.
               </p>
             </div>
-            <div className="card-hover rounded-2xl border border-primary/10 bg-white p-8 text-center shadow-soft">
+            <div className="card-hover flex h-full flex-col rounded-2xl border border-primary/10 bg-white p-8 text-center shadow-soft">
               <Users className="mx-auto h-8 w-8 text-accent" />
               <h3 className="mt-4 font-semibold text-primary">Inclusive</h3>
               <p className="mt-2 text-sm text-primary/50">

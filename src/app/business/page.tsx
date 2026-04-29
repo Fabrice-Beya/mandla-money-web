@@ -90,7 +90,7 @@ export default function BusinessPage() {
       </section>
 
       {/* Who It's For */}
-      <section className="py-20">
+      <section id="who-its-for" className="scroll-mt-24 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="text-center text-3xl font-bold text-primary md:text-4xl">
             Who it&apos;s for
@@ -120,7 +120,7 @@ export default function BusinessPage() {
       </section>
 
       {/* Why businesses choose Mandla Money */}
-      <section className="bg-primary py-20">
+      <section id="why-businesses-choose" className="scroll-mt-24 bg-primary py-20">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="text-center text-3xl font-bold text-white md:text-4xl">
             Why businesses choose Mandla Money
@@ -198,7 +198,7 @@ export default function BusinessPage() {
       </section>
 
       {/* Bulk Payout Flow */}
-      <section className="bg-white py-20">
+      <section id="bulk-payout-flow" className="scroll-mt-24 bg-white py-20">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="text-center text-3xl font-bold text-primary md:text-4xl">
             Bulk payout flow
@@ -225,7 +225,7 @@ export default function BusinessPage() {
       </section>
 
       {/* API Section */}
-      <section id="api" className="py-20">
+      <section id="api" className="scroll-mt-24 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div>

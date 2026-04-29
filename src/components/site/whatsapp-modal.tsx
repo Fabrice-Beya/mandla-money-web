@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Image from "next/image";
+import { useEffect } from "react";
 import { X } from "lucide-react";
+import { basePath } from "@/lib/base-path";
 import { WHATSAPP_URL } from "@/lib/design-system";
 
 export function WhatsAppModal({
@@ -11,13 +13,8 @@ export function WhatsAppModal({
   open: boolean;
   onClose: () => void;
 }) {
-  const [qrUrl, setQrUrl] = useState("");
-
   useEffect(() => {
     if (open) {
-      setQrUrl(
-        `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(WHATSAPP_URL)}`
-      );
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -55,17 +52,13 @@ export function WhatsAppModal({
         
 
         <div className="mx-auto mt-6 flex h-[220px] w-[220px] items-center justify-center rounded-xl border border-primary/10 bg-white p-2">
-          {qrUrl ? (
-            <img
-              src={qrUrl}
-              alt="QR code to open Mandla Money on WhatsApp"
-              width={200}
-              height={200}
-              className="h-[200px] w-[200px]"
-            />
-          ) : (
-            <div className="h-[200px] w-[200px] animate-pulse rounded-lg bg-primary/5" />
-          )}
+          <Image
+            src={`${basePath}/official_qr.png`}
+            alt="QR code to open Mandla Money on WhatsApp"
+            width={200}
+            height={200}
+            className="h-[200px] w-[200px]"
+          />
         </div>
 
         <a

@@ -32,18 +32,21 @@ const howItWorksSteps = [
     number: "01",
     title: "Message Mandla",
     description: 'Send "Hi" on WhatsApp or dial USSD',
+    supportingText: "No app needed. No downloads.",
     icon: MessageCircle,
   },
   {
     number: "02",
-    title: "Set up in seconds",
-    description: "Your phone number becomes your wallet",
+    title: "Your number becomes your wallet",
+    description: "Get set up in seconds using just your phone number",
+    supportingText: "No forms. No complexity.",
     icon: Smartphone,
   },
   {
     number: "03",
-    title: "Send and receive",
-    description: "Transfer money instantly",
+    title: "Send and receive instantly",
+    description: "Move money locally or across borders in seconds",
+    supportingText: "Fast, simple, available 24/7.",
     icon: Zap,
   },
 ];
@@ -127,7 +130,7 @@ export default function Home() {
           playsInline
           preload="auto"
         >
-          <source src={`${basePath}/visuals/video_heror.mp4`} type="video/mp4" />
+          <source src={`${basePath}/visuals/video_hero_2.mp4`} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/50 to-primary/30" />
 
@@ -214,61 +217,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3.2 Social Proof Section */}
-      <section className="border-b border-primary/5 bg-white py-14">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid divide-y divide-primary/10 md:grid-cols-3 md:divide-x md:divide-y-0">
-            <div className="px-4 py-6 text-center md:py-2">
-              <p className="font-display text-4xl font-bold tracking-tight text-primary">
-                1,000+
-              </p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-primary/40">
-                Users onboarded
-              </p>
-            </div>
-            <div className="px-4 py-6 text-center md:py-2">
-              <p className="font-display text-4xl font-bold tracking-tight text-primary">
-                11
-              </p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-primary/40">
-                Countries live
-              </p>
-            </div>
-            <div className="px-4 py-6 text-center md:py-2">
-              <p className="font-display text-4xl font-bold tracking-tight text-primary">
-                FSP55523
-              </p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-primary/40">
-                FSCA authorised
-              </p>
-            </div>
-          </div>
-
-          <p className="mt-12 text-center text-xs font-semibold uppercase tracking-[0.18em] text-primary/40">
-            Backed by
-          </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-            {partners.map((partner) => (
-              <a
-                key={partner.name}
-                href={partner.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="grayscale opacity-60 transition hover:opacity-100 hover:grayscale-0"
-              >
-                <Image
-                  src={`${basePath}${partner.logo}`}
-                  alt={partner.name}
-                  width={120}
-                  height={40}
-                  className="h-10 w-auto object-contain"
-                />
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 3.3 How It Works */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6">
@@ -277,7 +225,10 @@ export default function Home() {
               How it works
             </h2>
             <p className="mt-4 text-lg text-primary/60">
-              Three simple steps. Any phone. Any network.
+              Your phone number is your wallet.
+            </p>
+            <p className="mt-2 text-lg text-primary/60">
+              Send money instantly. Any phone. Any network.
             </p>
           </div>
 
@@ -308,6 +259,9 @@ export default function Home() {
                     <p className="mt-2 text-sm text-primary/60">
                       {step.description}
                     </p>
+                    <p className="mt-1 text-sm text-primary/50">
+                      {step.supportingText}
+                    </p>
                   </div>
                 );
               })}
@@ -315,9 +269,12 @@ export default function Home() {
           </div>
 
           <div className="mt-12 text-center">
+            <p className="text-sm font-medium text-primary/60">
+              Powered by digital dollars (stablecoins)
+            </p>
             <button
               onClick={handleCTA}
-              className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3.5 text-sm font-semibold text-primary transition hover:brightness-105"
+              className="mt-4 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3.5 text-sm font-semibold text-primary transition hover:brightness-105"
             >
               Start on WhatsApp
               <ArrowRight className="h-4 w-4" />

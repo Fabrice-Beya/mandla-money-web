@@ -9,7 +9,7 @@ export default function FaqPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary pt-20 pb-12">
+      <section className="bg-gradient-to-b from-primary to-primary/95 pt-20 pb-12">
         <div className="mx-auto max-w-4xl px-6">
           <Link
             href="/"
@@ -31,9 +31,11 @@ export default function FaqPage() {
       </section>
 
       {/* Full FAQ list */}
-      <section className="bg-primary pb-24">
+      <section className="bg-off-white pb-24 pt-10">
         <div className="mx-auto max-w-4xl px-6">
-          <FaqAccordion items={faqItems} />
+          <div className="rounded-2xl border border-primary/10 bg-white px-6 py-4 shadow-soft md:px-8">
+            <FaqAccordion items={faqItems} variant="light" />
+          </div>
         </div>
       </section>
     </>

@@ -199,7 +199,7 @@ export default function ContactPage() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 ring-1 ring-accent/20">
                   <MessageCircle className="h-5 w-5 text-accent" />
                 </div>
-                <h3 className="mt-4 font-semibold text-primary">WhatsApp</h3>
+                <h3 className="mt-4 font-semibold text-primary">Phone number</h3>
                 <a
                   href="https://wa.me/27600410476"
                   target="_blank"
@@ -212,10 +212,13 @@ export default function ContactPage() {
 
               <div className="rounded-2xl border border-white/10 bg-primary p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">
-                  Regulated
+                Mandla Money Notice
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-white/60">
-                  Mandla Money (Pty) Ltd · Registration 2019/470624/07. Authorised Financial Services Provider (FSP&nbsp;55523).
+                Mandla Money (Pty) Ltd (2019/470624/07) is an authorised Financial Services Provider (FSP 55523).
+Digital assets are not legal tender and carry risk. Blockchain transactions may be irreversible.
+Never share your PIN or verification codes.
+By using this service, you agree to our Terms of Use, Privacy Policy, and Risk Disclosure.
                 </p>
               </div>
             </div>

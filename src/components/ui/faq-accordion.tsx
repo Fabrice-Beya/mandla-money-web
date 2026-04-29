@@ -8,11 +8,18 @@ type FaqItem = {
   answer: React.ReactNode;
 };
 
-export function FaqAccordion({ items }: { items: FaqItem[] }) {
+export function FaqAccordion({
+  items,
+  variant = "dark",
+}: {
+  items: FaqItem[];
+  variant?: "dark" | "light";
+}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const isLight = variant === "light";
 
   return (
-    <div className="divide-y divide-white/10">
+    <div className={isLight ? "divide-y divide-primary/10" : "divide-y divide-white/10"}>
       {items.map((item, i) => {
         const isOpen = openIndex === i;
         return (
@@ -24,16 +31,26 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
             >
               <span
                 className={`pr-2 text-base font-medium transition-colors md:text-lg ${
-                  isOpen ? "text-white" : "text-white/85 group-hover:text-white"
+                  isLight
+                    ? isOpen
+                      ? "text-primary"
+                      : "text-primary/80 group-hover:text-primary"
+                    : isOpen
+                      ? "text-white"
+                      : "text-white/85 group-hover:text-white"
                 }`}
               >
                 {item.question}
               </span>
               <span
                 className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
-                  isOpen
-                    ? "border-accent/50 bg-accent/10 text-accent"
-                    : "border-white/20 text-white/60 group-hover:border-white/40 group-hover:text-white"
+                  isLight
+                    ? isOpen
+                      ? "border-accent/60 bg-accent/10 text-accent"
+                      : "border-primary/20 text-primary/50 group-hover:border-primary/40 group-hover:text-primary"
+                    : isOpen
+                      ? "border-accent/50 bg-accent/10 text-accent"
+                      : "border-white/20 text-white/60 group-hover:border-white/40 group-hover:text-white"
                 }`}
               >
                 <Plus
@@ -49,7 +66,11 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
               }`}
             >
               <div className="min-h-0">
-                <div className="pb-6 pr-12 text-sm leading-relaxed text-white/60 md:text-base">
+                <div
+                  className={`pb-6 pr-12 text-sm leading-relaxed md:text-base ${
+                    isLight ? "text-primary/60" : "text-white/60"
+                  }`}
+                >
                   {item.answer}
                 </div>
               </div>

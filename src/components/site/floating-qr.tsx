@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Download, QrCode } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { basePath } from "@/lib/base-path";
 
 export function FloatingQr() {
@@ -12,14 +12,6 @@ export function FloatingQr() {
     const origin = window.location.origin;
     setTargetUrl(`${origin}${basePath}/contact/`);
   }, []);
-
-  const qrImageUrl = useMemo(() => {
-    if (!targetUrl) {
-      return "";
-    }
-
-    return `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(targetUrl)}`;
-  }, [targetUrl]);
 
   return (
     <div className="pointer-events-none fixed bottom-4 right-4 z-[60] sm:bottom-6 sm:right-6">
@@ -45,20 +37,13 @@ export function FloatingQr() {
           aria-label="Open Mandla QR code"
         >
           <div className="rounded-[20px] bg-white p-2">
-            {qrImageUrl ? (
-              // External QR rendering keeps the asset lightweight for static export.
-              <img
-                src={qrImageUrl}
-                alt="QR code linking to the Mandla Money contact page"
-                width={168}
-                height={168}
-                className="h-28 w-28 rounded-[16px] object-cover sm:h-36 sm:w-36"
-              />
-            ) : (
-              <div className="flex h-28 w-28 items-center justify-center rounded-[16px] bg-primary/5 sm:h-36 sm:w-36">
-                <QrCode className="h-10 w-10 text-primary/35" />
-              </div>
-            )}
+            <img
+              src={`${basePath}/official_qr.png`}
+              alt="Official Mandla Money QR code"
+              width={168}
+              height={168}
+              className="h-28 w-28 rounded-[16px] object-cover sm:h-36 sm:w-36"
+            />
           </div>
 
           <p className="pb-1 pt-3 text-center text-xl font-semibold tracking-[-0.03em] text-primary sm:text-2xl">

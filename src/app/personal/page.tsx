@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import {
   ArrowRight,
@@ -10,6 +11,7 @@ import {
   Send,
   Zap,
 } from "lucide-react";
+import { basePath } from "@/lib/base-path";
 import { WHATSAPP_URL } from "@/lib/design-system";
 import { WhatsAppModal } from "@/components/site/whatsapp-modal";
 
@@ -35,7 +37,7 @@ export default function PersonalPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary pt-20 pb-24">
+      <section id="get-started" className="scroll-mt-24 bg-primary pt-20 pb-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
@@ -60,7 +62,7 @@ export default function PersonalPage() {
       </section>
 
       {/* QR Section */}
-      <section className="py-20">
+      <section id="scan-to-start" className="scroll-mt-24 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="text-center text-3xl font-bold text-primary md:text-4xl">
             Scan to start
@@ -68,8 +70,8 @@ export default function PersonalPage() {
           <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="flex flex-col items-center">
               <div className="rounded-2xl border border-primary/10 bg-white p-4 shadow-soft">
-                <img
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(WHATSAPP_URL)}`}
+                <Image
+                  src={`${basePath}/official_qr.png`}
                   alt="QR code to open Mandla Money on WhatsApp"
                   width={220}
                   height={220}
@@ -82,7 +84,7 @@ export default function PersonalPage() {
               </p>
             </div>
 
-            <div>
+            <div id="what-you-can-do" className="scroll-mt-24">
               <h3 className="text-xl font-semibold text-primary">
                 What you can do
               </h3>
@@ -103,7 +105,7 @@ export default function PersonalPage() {
       </section>
 
       {/* Why people choose Mandla Money */}
-      <section className="bg-white py-20">
+      <section id="why-people-choose" className="scroll-mt-24 bg-white py-20">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="text-center text-3xl font-bold text-primary md:text-4xl">
             Why people choose Mandla Money
