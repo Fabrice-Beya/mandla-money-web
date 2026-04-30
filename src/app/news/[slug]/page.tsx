@@ -6,7 +6,9 @@ import { basePath } from "@/lib/base-path";
 import { getNewsArticleBySlug, newsArticles } from "@/lib/news-data";
 
 export function generateStaticParams() {
-  return newsArticles.map((article) => ({ slug: article.slug }));
+  return newsArticles
+    .filter((article) => !article.sourceUrl)
+    .map((article) => ({ slug: article.slug }));
 }
 
 export default async function NewsArticlePage({

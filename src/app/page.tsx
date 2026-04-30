@@ -137,10 +137,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-20 pt-16">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="max-w-xl">
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/70 backdrop-blur">
-                <Shield className="h-3.5 w-3.5 text-accent" />
-                Authorised FSP 55523 · Live in 11 countries
-              </div>
+              
               <h1 className="text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-6xl lg:text-7xl">
                 Your phone number is your wallet.
               </h1>
@@ -510,19 +507,19 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-4 lg:grid-cols-4">
+          <div className="mt-12 grid items-start gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {newsArticles.map((article) => (
               <article
                 key={article.title}
-                className="card-hover overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-soft"
+                className="card-hover h-fit overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-soft"
               >
-                <div className="bg-off-white p-2">
+                <div className="bg-off-white p-2 rounded-t-2xl">
                   <Image
                     src={`${basePath}${article.image}`}
                     alt={article.title}
                     width={article.imageWidth}
                     height={article.imageHeight}
-                    className="h-auto w-full"
+                    className="h-auto w-full rounded-t-xl"
                   />
                 </div>
                 <div className="p-4">
@@ -536,7 +533,9 @@ export default function Home() {
                     {article.excerpt}
                   </p>
                   <Link
-                    href={`/news/${article.slug}`}
+                    href={article.sourceUrl ?? `/news/${article.slug}`}
+                    target={article.sourceUrl ? "_blank" : undefined}
+                    rel={article.sourceUrl ? "noopener noreferrer" : undefined}
                     className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition hover:text-accent"
                   >
                     Read more

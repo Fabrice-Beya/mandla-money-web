@@ -52,10 +52,12 @@ export default function NewsPage() {
                   {article.excerpt}
                 </p>
                 <Link
-                  href={`/news/${article.slug}`}
+                  href={article.sourceUrl ?? `/news/${article.slug}`}
+                  target={article.sourceUrl ? "_blank" : undefined}
+                  rel={article.sourceUrl ? "noopener noreferrer" : undefined}
                   className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:text-accent"
                 >
-                  Read full article
+                  {article.sourceUrl ? "Read source article" : "Read full article"}
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>

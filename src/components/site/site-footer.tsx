@@ -108,6 +108,38 @@ export function SiteFooter() {
                 <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6a3 3 0 0 0-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" />
               </svg>
             </a>
+            <a
+              href="https://x.com/MandlaMoney"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Mandla Money on X"
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-white/60 transition hover:border-accent/40 hover:bg-accent/10 hover:text-accent"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden
+                className="h-4 w-4"
+              >
+                <path d="M18.9 2H22l-6.76 7.73L23 22h-6.1l-4.77-6.25L6.68 22H3.56l7.23-8.27L1 2h6.26l4.31 5.69L18.9 2Zm-1.07 18h1.69L6.35 3.9H4.53L17.83 20Z" />
+              </svg>
+            </a>
+            <a
+              href="https://t.me/+HtoNr3A2-oQwYzJk"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Mandla Money on Telegram"
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-white/60 transition hover:border-accent/40 hover:bg-accent/10 hover:text-accent"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden
+                className="h-4 w-4"
+              >
+                <path d="M9.04 15.46 8.7 20.2c.49 0 .7-.21.96-.46l2.3-2.2 4.76 3.48c.87.49 1.49.23 1.73-.8l3.13-14.66h.01c.28-1.29-.47-1.79-1.32-1.47L1.89 11.2c-1.25.49-1.23 1.18-.21 1.5l4.7 1.47L17.3 7.3c.51-.34.98-.15.59.19" />
+              </svg>
+            </a>
           </div>
         </div>
 

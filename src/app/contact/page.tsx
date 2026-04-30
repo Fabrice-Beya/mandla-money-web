@@ -195,7 +195,7 @@ export default function ContactPage() {
                 </a>
               </div>
 
-              <div className="card-hover rounded-2xl border border-primary/10 bg-white p-6 shadow-soft">
+              {/* <div className="card-hover rounded-2xl border border-primary/10 bg-white p-6 shadow-soft">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 ring-1 ring-accent/20">
                   <MessageCircle className="h-5 w-5 text-accent" />
                 </div>
@@ -208,7 +208,7 @@ export default function ContactPage() {
                 >
                   +27 60 041 0476
                 </a>
-              </div>
+              </div> */}
 
               <div className="rounded-2xl border border-white/10 bg-primary p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">
@@ -216,9 +216,6 @@ export default function ContactPage() {
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-white/60">
                 Mandla Money (Pty) Ltd (2019/470624/07) is an authorised Financial Services Provider (FSP 55523).
-Digital assets are not legal tender and carry risk. Blockchain transactions may be irreversible.
-Never share your PIN or verification codes.
-By using this service, you agree to our Terms of Use, Privacy Policy, and Risk Disclosure.
                 </p>
               </div>
             </div>

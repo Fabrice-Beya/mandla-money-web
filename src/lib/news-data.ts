@@ -9,9 +9,31 @@ export type NewsArticle = {
   paragraphs: string[];
   externalLinks?: Array<{ label: string; href: string }>;
   detailImagePlacement?: "side" | "inline";
+  sourceUrl?: string;
 };
 
 export const newsArticles: NewsArticle[] = [
+  {
+    slug: "reimagining-mobile-money-via-stablecoins-and-whatsapp",
+    title: "Reimagining mobile money via stablecoins and WhatsApp",
+    date: "October 08, 2025",
+    image: "/articles/uct.png",
+    imageWidth: 1506,
+    imageHeight: 988,
+    excerpt:
+      "After a successful trip to Singapore this year, University of Cape Town (UCT) student Julian Kanjere is excited about the potential of stablecoins to advance financial inclusion.",
+    paragraphs: [
+      "After a successful trip to Singapore this year, University of Cape Town (UCT) student Julian Kanjere is excited about the potential of stablecoins to advance financial inclusion.",
+    ],
+    sourceUrl:
+      "https://www.news.uct.ac.za/article/-2025-10-08-reimagining-mobile-money-via-stablecoins-and-whatsapp",
+    externalLinks: [
+      {
+        label: "Read source article on UCT News",
+        href: "https://www.news.uct.ac.za/article/-2025-10-08-reimagining-mobile-money-via-stablecoins-and-whatsapp",
+      },
+    ],
+  },
   {
     slug: "apex-developer-conference-las-vegas",
     title: "Mandla Money at Apex Developer Conference in Las Vegas",

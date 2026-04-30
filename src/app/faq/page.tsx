@@ -25,7 +25,7 @@ export default function FaqPage() {
             Frequently Asked Questions
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-white/60">
-            Everything you need to know about using Mandla Money — from setup to cross-border transfers.
+            Everything you need to know about using Mandla Money - from setup to cross-border transfers.
           </p>
         </div>
       </section>
